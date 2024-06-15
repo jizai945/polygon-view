@@ -1,0 +1,319 @@
+{
+    "name": "graphicaldebugging",
+    "language": "cpp",
+    "types": [
+        {
+            "type": "boost::array<.+>",
+            "kind": "container",
+            "array": {
+                "start": "$this.elems",
+                "size": "$T1"
+            }
+        },
+        {
+            "type": "boost::chrono::duration<.+>",
+            "kind": "value",
+            "name": "$this.rep_"
+        },
+        {
+            "type": "boost::container::static_vector<.+>",
+            "kind": "container",
+            "array": {
+                "start": "($T0*)$this.m_holder.storage.data",
+                "size": "$this.m_holder.m_size"
+            }
+        },
+        {
+            "type": "boost::container::vector<.+>",
+            "kind": "container",
+            "array": {
+                "start": "$this.m_holder.m_start",
+                "size": "$this.m_holder.m_size"
+            }
+        },
+        {
+            "type": "boost::geometry::model::point<.+cartesian>",
+            "kind": "point",
+            "system": "cartesian",
+            "coordinates": {
+                "x": "$this.m_values[0]",
+                "y": "$this.m_values[1]"
+            }
+        },
+        {
+            "type": "boost::geometry::model::point<.+spherical_equatorial.+degree.+>",
+            "kind": "point",
+            "system": "geographic",
+            "unit": "degree",
+            "coordinates": {
+                "x": "$this.m_values[0]",
+                "y": "$this.m_values[1]"
+            }
+        },
+        {
+            "type": "boost::geometry::model::point<.+spherical_equatorial.+radian.+>",
+            "kind": "point",
+            "system": "geographic",
+            "unit": "radian",
+            "coordinates": {
+                "x": "$this.m_values[0]",
+                "y": "$this.m_values[1]"
+            }
+        },
+        {
+            "type": "boost::geometry::model::point<.+geographic.+degree.+>",
+            "kind": "point",
+            "system": "geographic",
+            "unit": "degree",
+            "coordinates": {
+                "x": "$this.m_values[0]",
+                "y": "$this.m_values[1]"
+            }
+        },
+        {
+            "type": "boost::geometry::model::point<.+geographic.+radian.+>",
+            "kind": "point",
+            "system": "geographic",
+            "unit": "radian",
+            "coordinates": {
+                "x": "$this.m_values[0]",
+                "y": "$this.m_values[1]"
+            }
+        },
+        {
+            "type": "boost::geometry::model::d2::point_xy<.+cartesian>",
+            "kind": "point",
+            "system": "cartesian",
+            "coordinates": {
+                "x": "$this.m_values[0]",
+                "y": "$this.m_values[1]"
+            }
+        },
+        {
+            "type": "boost::geometry::model::d2::point_xy<.+spherical_equatorial.+degree.+>",
+            "kind": "point",
+            "system": "geographic",
+            "unit": "degree",
+            "coordinates": {
+                "x": "$this.m_values[0]",
+                "y": "$this.m_values[1]"
+            }
+        },
+        {
+            "type": "boost::geometry::model::d2::point_xy<.+spherical_equatorial.+radian.+>",
+            "kind": "point",
+            "system": "geographic",
+            "unit": "radian",
+            "coordinates": {
+                "x": "$this.m_values[0]",
+                "y": "$this.m_values[1]"
+            }
+        },
+        {
+            "type": "boost::geometry::model::d2::point_xy<.+geographic.+degree.+>",
+            "kind": "point",
+            "system": "geographic",
+            "unit": "degree",
+            "coordinates": {
+                "x": "$this.m_values[0]",
+                "y": "$this.m_values[1]"
+            }
+        },
+        {
+            "type": "boost::geometry::model::d2::point_xy<.+geographic.+radian.+>",
+            "kind": "point",
+            "system": "geographic",
+            "unit": "radian",
+            "coordinates": {
+                "x": "$this.m_values[0]",
+                "y": "$this.m_values[1]"
+            }
+        },
+        {
+            "type": "boost::geometry::model::d3::point_xyz<.+cartesian>",
+            "kind": "point",
+            "system": "cartesian",
+            "coordinates": {
+                "x": "$this.m_values[0]",
+                "y": "$this.m_values[1]"
+            }
+        },
+        {
+            "type": "boost::geometry::model::d3::point_xyz<.+spherical_equatorial.+degree.+>",
+            "kind": "point",
+            "system": "geographic",
+            "unit": "degree",
+            "coordinates": {
+                "x": "$this.m_values[0]",
+                "y": "$this.m_values[1]"
+            }
+        },
+        {
+            "type": "boost::geometry::model::d3::point_xyz<.+spherical_equatorial.+radian.+>",
+            "kind": "point",
+            "system": "geographic",
+            "unit": "radian",
+            "coordinates": {
+                "x": "$this.m_values[0]",
+                "y": "$this.m_values[1]"
+            }
+        },
+        {
+            "type": "boost::geometry::model::d3::point_xyz<.+geographic.+degree.+>",
+            "kind": "point",
+            "system": "geographic",
+            "unit": "degree",
+            "coordinates": {
+                "x": "$this.m_values[0]",
+                "y": "$this.m_values[1]"
+            }
+        },
+        {
+            "type": "boost::geometry::model::d3::point_xyz<.+geographic.+radian.+>",
+            "kind": "point",
+            "system": "geographic",
+            "unit": "radian",
+            "coordinates": {
+                "x": "$this.m_values[0]",
+                "y": "$this.m_values[1]"
+            }
+        },
+        {
+            "type": "boost::geometry::model::segment<.+>",
+            "kind": "segment",
+            "points": {
+                "p0": "$this.first",
+                "p1": "$this.second"
+            }
+        },
+        {
+            "type": "boost::geometry::model::linestring<.+>",
+            "kind": "linestring",
+            "points": {
+                "container": {
+                    "name": "$this",
+                    "type": "$T1<$T0,$T2<$T0>>"
+                }
+            }
+        },
+        {
+            "type": "boost::geometry::model::box<.+>",
+            "kind": "box",
+            "points": {
+                "min": "$this.m_min_corner",
+                "max": "$this.m_max_corner"
+            }
+        },
+        {
+            "type": "boost::geometry::model::ring<.+>",
+            "kind": "ring",
+            "cw": "$T1",
+            "points": {
+                "container": {
+                    "name": "$this",
+                    "type": "$T3<$T0,$T4<$T0>>"
+                }
+            }
+        },
+        {
+            "type": "boost::geometry::model::polygon<.+>",
+            "kind": "polygon",
+            "exteriorring": {
+                "name": "$this.m_outer",
+                "type": "boost::geometry::model::ring<$T0,$T1,$T2,$T3,$T5>"
+            },
+            "interiorrings": {
+                "container": {
+                    "name": "$this.m_inners",
+                    "type": "$T4<boost::geometry::model::ring<$T0,$T1,$T2,$T3,$T5>,$T6<boost::geometry::model::ring<$T0,$T1,$T2,$T3,$T5>>>"
+                }
+            }
+        },
+        {
+            "type": "boost::geometry::model::multi_point<.+>",
+            "kind": "multipoint",
+            "points": {
+                "container": {
+                    "name": "$this",
+                    "type": "$T1<$T0,$T2<$T0>>"
+                }
+            }
+        },
+        {
+            "type": "boost::geometry::model::multi_linestring<.+>",
+            "kind": "multilinestring",
+            "linestrings": {
+                "container": {
+                    "name": "$this",
+                    "type": "$T1<$T0,$T2<$T0>>"
+                }
+            }
+        },
+        {
+            "type": "boost::geometry::model::multi_polygon<.+>",
+            "kind": "multipolygon",
+            "polygons": {
+                "container": {
+                    "name": "$this",
+                    "type": "$T1<$T0,$T2<$T0>>"
+                }
+            }
+        },
+        {
+            "type": "boost::geometry::index::detail::varray<.+>",
+            "kind": "container",
+            "array": {
+                "start": "($T0*)$this.m_storage.data_.buf",
+                "size": "$this.m_size"
+            }
+        },
+        {
+            "type": "boost::polygon::point_data<.+>",
+            "kind": "point",
+            "system": "cartesian",
+            "coordinates": {
+                "x": "$this.coords_[0]",
+                "y": "$this.coords_[1]"
+            }
+        },
+        {
+            "type": "boost::polygon::segment_data<.+>",
+            "kind": "segment",
+            "points": {
+                "p0": "$this.points_[0]",
+                "p1": "$this.points_[1]"
+            }
+        },
+        {
+            "type": "boost::polygon::rectangle_data<.+>",
+            "kind": "box",
+            "system": "cartesian",
+            "coordinates": {
+                "minx": "$this.ranges_[0].coords_[0]",
+                "miny": "$this.ranges_[1].coords_[0]",
+                "maxx": "$this.ranges_[0].coords_[1]",
+                "maxy": "$this.ranges_[1].coords_[1]"
+            }
+        },
+        {
+            "type": "boost::polygon::polygon_data<.+>",
+            "kind": "ring",
+            "points": {
+                "container": { "name": "$this.coords_" }
+            }
+        },
+        {
+            "type": "boost::polygon::polygon_with_holes_data<.+>",
+            "kind": "polygon",
+            "exteriorring": { "name": "$this.self_" },
+            "interiorrings": {
+                "container": { "name": "$this.holes_" }
+            }
+        },
+        {
+            "type": "boost::units::quantity<.+>",
+            "kind": "value",
+            "name": "$this.val_"
+        }
+    ]
+}

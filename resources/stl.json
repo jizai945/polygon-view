@@ -1,0 +1,178 @@
+{
+    "name": "graphicaldebugging",
+    "language": "cpp",
+    "types": [
+        {
+            "type": "[a-zA-Z_][\\w<,>:\\s]*\\[\\d+\\]",
+            "kind": "container",
+            "array": {
+                "start": "$this",
+                "size": "$N0"
+            },
+            "_comment": "C array"
+        },
+        {
+            "type": "std::pair<.+>",
+            "kind": "point",
+            "coordinates": {
+                "x": "$this.first",
+                "y": "$this.second"
+            }
+        },
+        {
+            "type": "std::deque<.+>",
+            "kind": "container",
+            "array": {
+                "start": "$this",
+                "size": "$this._Mypair._Myval2._Mysize"
+            },
+            "_comment": "generic definition using index operator"
+        },
+        {
+            "type": "std::complex<.+>",
+            "kind": "point",
+            "system": "complex",
+            "coordinates": {
+                "x": "$this._Val[0]",
+                "y": "$this._Val[1]"
+            },
+            "_comment": "msvc"
+        },
+        {
+            "type": "std::chrono::duration<.+>",
+            "kind": "value",
+            "name": "$this._MyRep",
+            "_comment": "msvc"
+        },
+        {
+            "type": "std::array<.+>",
+            "kind": "container",
+            "array": {
+                "start": "$this._Elems",
+                "size": "$T1"
+            },
+            "_comment": "msvc"
+        },
+        {
+            "type": "std::span<.+>",
+            "kind": "container",
+            "array": {
+                "start": "$this._Mydata",
+                "size": "$this._Mysize"
+            },
+            "_comment": "msvc"
+        },
+        {
+            "type": "std::vector<.+>",
+            "kind": "container",
+            "darray": {
+                "start": "$this._Mypair._Myval2._Myfirst",
+                "finish": "$this._Mypair._Myval2._Mylast"
+            },
+            "_comment": "msvc"
+        },
+        {
+            "type": "std::list<.+>",
+            "kind": "container",
+            "linkedlist": {
+                "size": "$this._Mypair._Myval2._Mysize",
+                "head": "*$this._Mypair._Myval2._Myhead->_Next",
+                "next": "*$this._Next",
+                "value": "$this._Myval"
+            },
+            "_comment": "msvc",
+            "_description": "next and value are relative to node",
+            "_description2": "later use pointers for direct memory access"
+        },
+        {
+            "type": "std::chrono::duration<.+>",
+            "kind": "value",
+            "name": "$this.__r",
+            "_comment": "gcc/libstdc++"
+        },
+        {
+            "type": "std::array<.+>",
+            "kind": "container",
+            "array": {
+                "start": "$this._M_instance",
+                "size": "$T1"
+            },
+            "_comment": "gcc/libstdc++"
+        },
+        {
+            "type": "std::span<.+>",
+            "kind": "container",
+            "array": {
+                "start": "$this._M_ptr",
+                "size": "$this._M_extent._M_extent_value"
+            },
+            "_comment": "gcc/libstdc++"
+        },
+        {
+            "type": "std::span<.+>",
+            "kind": "container",
+            "array": {
+                "start": "$this._M_ptr",
+                "size": "$T1"
+            },
+            "_comment": "gcc/libstdc++"
+        },
+        {
+            "type": "std::vector<.+>",
+            "kind": "container",
+            "darray": {
+                "start": "$this._M_impl._M_start",
+                "finish": "$this._M_impl._M_finish"
+            },
+            "_comment": "gcc/libstdc++"
+        },
+        {
+            "type": "std::__cxx11::list<.+>",
+            "kind": "container",
+            "linkedlist": {
+                "size": "$this._M_impl._M_node._M_size",
+                "head": "*$this._M_impl._M_node._M_next",
+                "next": "*$this._M_next",
+                "value": "*($T0*)((std::_List_node<$T0>*)&$this)._M_storage._M_storage"
+            },
+            "_comment": "gcc/libstdc++",
+            "_comment2": "should $this be replaced with something else in next and value?"
+        },
+        {
+            "type": "std::array<.+>",
+            "kind": "container",
+            "array": {
+                "start": "$this.__elems_",
+                "size": "$T1"
+            },
+            "_comment": "llvm/libc++"
+        },
+        {
+            "type": "std::span<.+>",
+            "kind": "container",
+            "array": {
+                "start": "$this.__data",
+                "size": "$this.__size"
+            },
+            "_comment": "llvm/libc++"
+        },
+        {
+            "type": "std::span<.+>",
+            "kind": "container",
+            "array": {
+                "start": "$this.__data",
+                "size": "$T1"
+            },
+            "_comment": "llvm/libc++"
+        },
+        {
+            "type": "std::vector<.+>",
+            "kind": "container",
+            "darray": {
+                "start": "$this.__begin_",
+                "finish": "$this.__end_"
+            },
+            "_comment": "llvm/libc++"
+        }
+    ]
+}

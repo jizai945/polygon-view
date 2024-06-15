@@ -1,0 +1,193 @@
+{
+    "name": "graphicaldebugging",
+    "language": "python",
+    "types": [
+        {
+            "type": "list",
+            "kind": "container",
+            "array": {
+                "start": "$this",
+                "size": "$this.__len__()"
+            }
+        },
+        {
+            "type": "deque",
+            "kind": "container",
+            "array": {
+                "start": "$this",
+                "size": "$this.__len__()"
+            }
+        },
+        {
+            "type": "sllist",
+            "kind": "container",
+            "linkedlist": {
+                "size": "$this.size",
+                "head": "$this.first",
+                "next": "$this.next",
+                "value": "$this.value"
+            },
+            "_comment": "llist module"
+        },
+        {
+            "type": "dllist",
+            "kind": "container",
+            "linkedlist": {
+                "size": "$this.size",
+                "head": "$this.first",
+                "next": "$this.next",
+                "value": "$this.value"
+            },
+            "_comment": "llist module"
+        },
+        {
+            "type": "ndarray",
+            "kind": "container",
+            "array": {
+                "start": "$this",
+                "size": "$this.__len__()"
+            },
+            "_comment": "numpy module"
+        },
+        {
+            "type": "Point2D",
+            "kind": "point",
+            "system": "cartesian",
+            "coordinates": {
+                "x": "$this.x",
+                "y": "$this.y"
+            },
+            "_comment": "SymPy module"
+        },
+        {
+            "type": "Segment2D",
+            "kind": "segment",
+            "points": {
+                "p0": "$this.p1",
+                "p1": "$this.p2"
+            },
+            "_comment": "SymPy module"
+        },
+        {
+            "type": "Polygon",
+            "kind": "ring",
+            "points": {
+                "container": { "name": "$this.vertices" }
+            },
+            "_comment": "SymPy module"
+        },
+        {
+            "type": "Point",
+            "kind": "point",
+            "system": "cartesian",
+            "coordinates": {
+                "x": "$this.x",
+                "y": "$this.y"
+            },
+            "_comment": "Shapely module"
+        },
+        {
+            "type": "tuple",
+            "kind": "point",
+            "system": "cartesian",
+            "coordinates": {
+                "x": "$this[0]",
+                "y": "$this[1]"
+            },
+            "_comment": "Shapely module"
+        },
+        {
+            "type": "CoordinateSequence",
+            "kind": "container",
+            "array": {
+                "start": "$this",
+                "size": "$this.__len__()"
+            },
+            "_comment": "Shapely module"
+        },
+        {
+            "type": "InteriorRingSequence",
+            "kind": "container",
+            "array": {
+                "start": "$this",
+                "size": "$this.__len__()"
+            },
+            "_comment": "Shapely module"
+        },
+        {
+            "type": "LineString",
+            "kind": "linestring",
+            "points": {
+                "container": { "name": "$this.coords" }
+            },
+            "_comment": "Shapely module"
+        },
+        {
+            "type": "LinearRing",
+            "kind": "ring",
+            "points": {
+                "container": { "name": "$this.coords" }
+            },
+            "_comment": "Shapely module"
+        },
+        {
+            "type": "Polygon",
+            "kind": "polygon",
+            "exteriorring": { "name": "$this.exterior" },
+            "interiorrings": {
+                "container": { "name": "$this.interiors" }
+            },
+            "_comment": "Shapely module"
+        },
+        {
+            "type": "GeometrySequence",
+            "kind": "container",
+            "array": {
+                "start": "$this",
+                "size": "$this.__len__()"
+            },
+            "_comment": "Shapely module"
+        },
+        {
+            "type": "HeterogeneousGeometrySequence",
+            "kind": "container",
+            "array": {
+                "start": "$this",
+                "size": "$this.__len__()"
+            },
+            "_comment": "Shapely module"
+        },
+        {
+            "type": "MultiPoint",
+            "kind": "multipoint",
+            "points": {
+                "container": { "name": "$this.geoms" }
+            },
+            "_comment": "Shapely module"
+        },
+        {
+            "type": "MultiLineString",
+            "kind": "multilinestring",
+            "linestrings": {
+                "container": { "name": "$this.geoms" }
+            },
+            "_comment": "Shapely module"
+        },
+        {
+            "type": "MultiPolygon",
+            "kind": "multipolygon",
+            "polygons": {
+                "container": { "name": "$this.geoms" }
+            },
+            "_comment": "Shapely module"
+        },
+        {
+            "type": "GeometryCollection",
+            "kind": "geometrycollection",
+            "geometries": {
+                "container": { "name": "$this.geoms" }
+            },
+            "_comment": "Shapely module"
+        }
+    ]
+}
